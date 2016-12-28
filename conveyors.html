@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="images/MMHsquareFaviconPNG.png" sizes="16x16">
+<title>Conveyors</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+<body>
+
+<ul class="w3-navbar w3-black">
+
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="https://www.facebook.com/MansfieldMaterialHandling" target="blank">Facebook</a></li>
+  <li><a href="https://www.pinterest.com/mansfieldfw/" target="blank">Pinterest</a></li>
+  <li><a href="https://twitter.com/MansfieldFW" target="blank">Twitter</a></li>
+  <li><a href="javascript:void(0)" onclick="w3_open()">Products <i class="fa fa-caret-down"></i></a></li>
+</ul>
+
+<nav class="w3-dropnav w3-card-2" style="display:none" id="myDropnav">
+  <div class="w3-container">
+  <span onclick="w3_close()" class="w3-closebtn w3-xlarge" title="Close Menu">&times;</span>
+  </div>
+  <div class="w3-row-padding w3-padding-bottom">
+    <div class="w3-third">
+    <a href="bins.html">Bins & Totes</a>
+    <a href="cabinets.html">Cabinets</a>
+    <a href="baskets.html">Canvas & Wire Baskets</a>
+	<a href="carts.html">Carts & Hand Trucks</a>
+    <a href="casters.html">Casters</a>
+    <a href="chairs.html">Chairs & Stools</a>
+	<a href="containers.html">Containers</a>
+    <a href="conveyors.html">Conveyors</a>
+	<a href="cranes.html">Cranes</a>
+	<a href="crowd.html">Crowd Control</a>
+    <a href="desk.html">Desks, Tables, & Workbenches</a>
+	<a href="dock.html">Dock Equipment</a>
+    </div>
+    <div class="w3-third">
+	<a href="dollies.html">Dollies</a>
+    <a href="drum.html">Drum Equipment</a>
+	<a href="dump.html">Dump Hoppers</a>
+    <a href="mats.html">Floor Mats</a>
+	<a href="forklift.html">Forklift Equipment</a>
+	<a href="guards.html">Guards</a>
+    <a href="hoists.html">Hoists & Equipment</a>
+	<a href="hose.html">Hose & Cord Reels</a>
+	<a href="ladders.html">Ladders</a>
+    <a href="lift.html">Lift Tables & Accessories</a>
+	<a href="lockers.html">Lockers</a>
+    <a href="office.html">Office Furniture</a>
+    </div>
+    <div class="w3-third">
+    <a href="pallets.html">Pallets & Equipment</a>
+	<a href="partitions.html">Partitions</a>
+	<a href="platforms.html">Platforms</a>
+    <a href="racking.html">Racking</a>
+	<a href="safety.html">Safety & Security Equipment</a>
+	<a href="scales.html">Scales</a>
+    <a href="shelving.html">Shelving</a>
+	<a href="shipping.html">Shipping & Strapping Supplies</a>
+	<a href="tools.html">Tools & Accessories</a>
+    <a href="warehouse.html">Warehouse Equipment</a>
+    </div>
+  </div>
+  <br>
+  </ul>
+  </nav>
+  
+  </ul>
+</div>
+
+
+
+<script>
+if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
+{
+	echo '<div class="cart-view-table-front" id="view-cart">';
+	echo '<h3>Your Shopping Cart</h3>';
+	echo '<form method="post" action="cart_update.html">';
+	echo '<table width="100%"  cellpadding="6" cellspacing="0">';
+	echo '<tbody>';
+
+	$total =0;
+	$b = 0;
+	foreach ($_SESSION["cart_products"] as $cart_itm)
+	{
+		$product_name = $cart_itm["product_name"];
+		$product_qty = $cart_itm["product_qty"];
+		$product_price = $cart_itm["product_price"];
+		$product_code = $cart_itm["product_code"];
+		$product_color = $cart_itm["product_color"];
+		$bg_color = ($b++%2==1) ? 'odd' : 'even'; //zebra stripe
+		echo '<tr class="'.$bg_color.'">';
+		echo '<td>Qty <input type="text" size="2" maxlength="2" name="product_qty['.$product_code.']" value="'.$product_qty.'" /></td>';
+		echo '<td>'.$product_name.'</td>';
+		echo '<td><input type="checkbox" name="remove_code[]" value="'.$product_code.'" /> Remove</td>';
+		echo '</tr>';
+		$subtotal = ($product_price * $product_qty);
+		$total = ($total + $subtotal);
+	}
+	echo '<td colspan="4">';
+	echo '<button type="submit">Update</button><a href="view_cart.html" class="button">Checkout</a>';
+	echo '</td>';
+	echo '</tbody>';
+	echo '</table>';
+	
+	$current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+	echo '<input type="hidden" name="return_url" value="'.$current_url.'" />';
+	echo '</form>';
+	echo '</div>';
+
+
+</script>
+
+
+
+<script>
+var x = document.getElementById("myDropnav");
+function w3_open() {
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function w3_close() {
+    x.className = x.className.replace(" w3-show", "");
+}
+</script>
+
+<center>
+<td bgcolor="ffffff" align="center" boarder="1">
+
+<img border="0" src="images/MMHsquareLarge.png" width="90" height="90" >
+
+</td>
+
+<td bgcolor="ffffff" align="center" border="1" > 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- MMH Top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-3390012110274891"
+     data-ad-slot="8593797488"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+</center>
+
+<center>
+<table style="text-align: left; width: 984px; height: 80px;" border="0" cellpadding="0" cellspacing="0" bordercolor="#635a5a" bgcolor="white">
+
+
+<li class="product">
+	<form method="post" action="cart_update.html">
+	<div class="product-content"><strong><a href="D_329-95.php">4 Parts Bin 329-95 Slope Shelf 12" Deep Storage Durham</a></strong>
+	<div class="product-thumb"><img class="fancybox" src="image/329-95.jpeg" border=0 align="Center" width=175 height=175 alt="" /></div>
+	<div class="product-desc"></div>
+	<div class="product-info">
+	Price &#x24; 85.78
+	
+	<fieldset>
+	
+	<label>
+		<span>Color</span>
+		<select name="product_color">
+		<option value="Gray">Gray</option>
+		</select>
+	</label>
+			
+	<label>
+		<span>Quantity</span>
+		<input type="text" size="2" maxlength="2" name="product_qty" value="1" />
+	</label>
+	
+	
+	</fieldset>
+	<input type="hidden" name="product_code" value="D_329-95" />
+	<input type="hidden" name="type" value="add" />
+	<input type="hidden" name="return_url" value="conveyors.html" />
+	<div align="center"><button type="submit" class="add_to_cart">Add</button></div>
+	</div></div>
+	</form>
+</li>
+
+
+   <td><center><img src="images/VM-BALL-18301.jpg" border=0 align="Center" width=200 height=200 alt="" />
+        <style>
+  .black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+ }
+ .white_content {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    padding: 16px;
+    border: 16px solid #9F9F9F;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+ }
+</style>
+</head>
+<body>
+    <p><a href = "javascript:void(0)" onclick = "document.getElementById('BALL-1828').style.display='block';document.getElementById('fade').style.display='block'"><strong>Vestil Ball Transfer Platform</strong></a></p>
+    <div id="BALL-1828" class="white_content">
+    <img src="images/VM-BALL-18301.jpg" border=0 align="Left" width=350 height=300 alt="" />
+    <a href = "javascript:void(0)" onclick = "document.getElementById('BALL-1828').style.display='none';document.getElementById('fade').style.display='none'" class="w3-closebtn w3-xlarge">&times;</a>
+	<font color="black"><strong><br>
+	You are buying one Vestil Ball Transfer Platform Conveyor. Packages and products move easily on ball transfer balls. Adaptable to many Hydraulic Carts and Scissor Tables. 
+	Use a 3:1 Safety Factor on uneven surfaces - cart not included. Capacity 75 lbs. Contact us for a shipping quote.
+
+	<table>
+  <tr>
+    <th>Size</th>
+    <th>Finish</th>
+    <th>Weight</th>
+	<th>Capacity</th>
+	<th>Price</th>
+  </tr>
+  <tr>
+    <td>18" x 28"</td>
+    <td>Chrome Finish</td>
+    <td>30 lbs.</td>
+	<td>75 lbs.</td>
+	<td>$326.00</td>
+  </tr>
+  <tr>
+	<td>20" x 36"</td>
+    <td>Chrome Finish</td>
+    <td>33 lbs.</td>
+    <td>75 lbs.</td>
+	<td>$401.00</td>
+  </tr>
+  <tr> 
+	<td>24" x 48"</td>
+    <td>Powder Coat Blue</td>
+    <td>125 lbs.</td>
+    <td>75 lbs.</td>
+	<td>$637.00</td>
+  </tr>
+  <tr>
+	<td>40" x 48"</td>
+    <td>Powder Coat Blue</td>
+    <td>172 lbs.</td>
+    <td>75 lbs.</td>
+	<td>$1,005.00</td>
+  </tr>
+  <tr>
+	<td>30" x 60"</td>
+    <td>Powder Coat Blue</td>
+    <td>202 lbs.</td>
+    <td>75 lbs.</td>
+	<td>$969.00</td>
+  </tr>
+</table>
+	</div>
+    <div id="fade" class="black_overlay"></div>
+
+<script>
+// ini_set ('display_errors', 'true');
+// error_reporting(E_ALL);
+
+/*
+Valid domestic values: 
+“14” = Next Day Air Early 
+AM  
+“01” = Next Day Air  
+“13” = Next Day Air Saver 
+“59” = 2nd Day Air AM  
+“02” = 2nd Day Air 
+“12” = 3 Day Select 
+“03” = Ground 
+
+
+Valid international values: 
+“11”= Standard  
+“07” = Worldwide Express  
+“54” = Worldwide Express Plus
+“08” = Worldwide Expedited
+“65” = Saver 
+ 
+Required for Rating and 
+Ignored for Shopping 
+ 
+Valid Poland to Poland 
+Same Day values:
+“82” = UPS Today Standard
+“83” = UPS Today Dedicated Courier
+“84” = UPS Today Intercity
+“85” = UPS Today Express
+“86” = UPS Today Express Saver   
+
+Packaging Type Codes
+“00” = “UNKNOWN”
+“01” = UPS Letter
+“02” = Package
+“03” = Tube
+“04” = Pak
+“21” = Express Box
+“24” = 25KG Box
+“25” = 10KG Box
+“30” = Pallet
+“2a” = Small Express Box
+“2b” = Medium Express Box
+“2c” = Large Express Box 
+*/
+
+
+if(isset($_REQUEST['fromzip'])){
+	$fromzip = $_REQUEST['fromzip'];
+}else{
+	$fromzip = "";
+}
+if(isset($_REQUEST['tozip'])){
+	$tozip = $_REQUEST['tozip'];
+}else{
+	$tozip = "";
+}
+if(isset($_REQUEST['width'])){
+	$width = $_REQUEST['width'];
+}else{
+	$width = 6;
+}
+if(isset($_REQUEST['height'])){
+	$height = $_REQUEST['height'];
+}else{
+	$height = 6;
+}
+if(isset($_REQUEST['length'])){
+	$length = $_REQUEST['length'];
+}else{
+	$length = 7;
+}
+if(isset($_REQUEST['weight'])){
+	$weight = $_REQUEST['weight'];
+}else{
+	$weight = 12;
+}
+</script>
+<br>
+<center><form name="upsRate" action="conveyors.html" method="post" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="a" value="step1" />
+<strong>Calculate Shipping</strong>
+<div class="formline">
+Shipping from Zip: <input type="text" name="fromzip" value="<script> echo $fromzip; </script>" />
+</div>
+<div class="formline">
+Shipping to Zip: <input type="text" name="tozip" value="<script> echo $tozip; </script>" />
+</div>
+<div class="formline">
+<strong>Package Dimensions (inches)</strong>
+<br>
+Width: <input type="text" class="short" name="width" value="<script> echo $width; </script>" /> 
+<br>
+Height: <input type="text" class="short" name="height" value="<script> echo $height; </script>" /> 
+<br>
+Length: <input type="text" class="short" name="length" value="<script> echo $length; </script>" />
+</div>
+<div class="formline">
+Shipping Weight (LBS): <input type="text" name="weight" class="short" value="<script> echo $weight; </script>" />
+</div>
+<br>
+<div class="formline">
+<input type="submit" value="Calculate" />
+</div>
+</form></center>
+<script>
+
+if(isset($_REQUEST['a']) && $_REQUEST['a'] == "step1"){
+
+	$errors = false;
+	$errmessage = "";
+
+	if(is_numeric($_REQUEST['fromzip'])){
+		$fromzip = $_REQUEST['fromzip'];
+	}else{
+		$errors = true;
+		$errmessage = "Please enter a valid Shipping from Zip.<br />\n";
+	}
+	if(is_numeric($_REQUEST['tozip'])){
+		$tozip = $_REQUEST['tozip'];
+	}else{
+		$errors = true;
+		$errmessage = "Please enter a valid Shipping from Zip.<br />\n";
+	}
+	if(is_numeric($_REQUEST['length'])){
+		$length = $_REQUEST['length'];
+	}else{
+		$errors = true;
+		$errmessage = "Please enter a valid length.<br />\n";
+	}
+	if(is_numeric($_REQUEST['width'])){
+		$width = $_REQUEST['width'];
+	}else{
+		$errors = true;
+		$errmessage = "Please enter a valid width.<br />\n";
+	}
+	if(is_numeric($_REQUEST['height'])){
+		$height=$_REQUEST['height'];
+	}else{
+		$errors = true;
+		$errmessage = "Please enter a valid height.<br />\n";
+	}
+	if(is_numeric($_REQUEST['weight'])){
+		$weight = $_REQUEST['weight'];
+	}else{
+		$errors = true;
+		$errmessage = "Please enter a valid weight.<br />\n";
+	}
+		
+	if(!$errors){
+		
+		require("upsRate.php");
+
+		/*************************************
+		Get your own credentials from ups.com
+		*************************************/
+		$ups_accessnumber = "4CF7363FFECB3485";
+		$ups_username = "mansfieldfw";
+		$ups_password = "Bears1985";
+		$ups_shippernumber = "R4R501";
+	
+		// just doing domestic for demonstration purposes
+		$services = array(
+						"Next Day Air (early AM)"=>"14", 
+						"Next Day Air"=>"01", 
+						"Next Day Air Saver"=>"13", 
+						"2nd Day Air"=>"02", 
+						"3 Day Select"=>"12", 
+						"Ground"=>"03"
+					);
+		
+		$myRate = new upsRate;
+		$myRate->setCredentials($ups_accessnumber, $ups_username, $ups_password, $ups_shippernumber);
+		echo "<h1>UPS Rates</h1>\n";
+		echo "<ul>\n";
+		foreach($services as $name=>$value){
+			$service = $value;
+			$rate = $myRate->getRate($fromzip, $tozip, $service, $length, $width, $height, $weight);
+			echo "<li>$name - $rate</li>\n";
+		}
+		echo "</ul>";
+	
+	}else{
+		
+		echo "<h2>Form Errors:</h2><p>$errmessage</p>\n";
+	
+	}
+	
+}
+</script>
+	
+</strong></body>
+<head>
+<script type="text/javascript">
+   function updatePriceBALL() {
+      var price = document.getElementById("productBALL").value;
+      document.getElementById("priceBALL").innerHTML="<p>PRICE: " + price + "</p>";
+   }
+</script>
+</head>
+<body onload="updatePriceBALL()">
+<select id="productBALL" onchange="updatePriceBALL()">
+<option id="--" value="$0.00">Select Size</option>
+<option id="BALL-1828" value="$326.00">18" x 28" Chrome Finish ($326.00)</option>
+<option id="BALL-2036" value="$401.00">20" x 36" Chrome Finish ($401.00)</option>
+<option id="BALL-2448" value="$637.00">24" x 48" Powder Coat Blue ($637.00)</option>
+<option id="BALL-4048" value="$1,005.00">40" x 48" Powder Coat Blue ($1,005.00)</option>
+<option id="BALL-3060" value="$969.00">30" x 60" Powder Coat Blue ($969.00)</option>
+</select>
+<b><div id="priceBALL"><p>Price: $XX.XX</p></div></b>
+</td>
+
+    <td><center><img src="images/RC-BTRL-3-5.jpg" border=0 align="Center" width=200 height=200 alt="" />
+        <style>
+  .black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+ }
+ .white_content {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    padding: 16px;
+    border: 16px solid #9F9F9F;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+ }
+</style>
+</head>
+<body>
+    <p><a href = "javascript:void(0)" onclick = "document.getElementById('RC-BTRL-3-5').style.display='block';document.getElementById('fade').style.display='block'"><strong>Roll-A-Way 5' Ball Transfer Rail Conveyor</strong></a></p>
+
+    <div id="RC-BTRL-3-5" class="white_content">
+    <img src="images/RC-BTRL-3-5.jpg" border=0 align="Left" width=350 height=300 alt="" />
+    <a href = "javascript:void(0)" onclick = "document.getElementById('RC-BTRL-3-5').style.display='none';document.getElementById('fade').style.display='none'" class="w3-closebtn w3-xlarge">&times;</a>
+	<font color="black"><strong><br>
+	You are buying one Roll-A-Way Ball Transfer Rail Conveyor. These single frame rails are custom designed for transfer systems -- allows for fast change-of-load directions. Built for rugged durable use. Contact us for a shipping quote.
+    
+	<table>
+  <tr>
+	<th>Product Number</th>
+    <th>Description</th>
+    <th>Section Length</th>
+    <th>Ball Center Spacing</th>
+    <th>Capacity Ball (lbs.)</th>
+    <th>Weight (lbs.)</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>BTRL-3-5</td>
+    <td>1" Ball with 1/4" Stem - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>5'</td>
+    <td>3"</td>
+    <td>50</td>
+    <td>16</td>
+    <td>$81.00</td>
+  </tr>
+  <tr>
+    <td>BTRL-4-5</td>
+    <td>1" Ball with 1/4" Stem - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>5'</td>
+    <td>4"</td>
+    <td>50</td>
+    <td>14</td>
+    <td>$66.00</td>
+  </tr>
+  <tr>
+    <td>BTRL-6-5</td>
+    <td>1" Ball with 1/4" Stem - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>5'</td>
+    <td>6"</td>
+    <td>50</td>
+    <td>12</td>
+    <td>$45.60</td>
+  </tr>
+  <tr>
+    <td>BTRM-3-5</td>
+    <td>1" Oval Flange - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>5'</td>
+    <td>3"</td>
+    <td>75</td>
+    <td>16</td>
+    <td>$95.40</td>
+  </tr>
+  <tr>
+    <td>BTRM-4-5</td>
+    <td>1" Oval Flange - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>5'</td>
+    <td>4"</td>
+    <td>75</td>
+    <td>14</td>
+    <td>$75.00</td>
+  </tr>
+  <tr>
+    <td>BTRM-6-5</td>
+    <td>1" Oval Flange - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>5'</td>
+    <td>6"</td>
+    <td>75</td>
+    <td>12</td>
+    <td>$63.00</td>
+  </tr>
+  <tr>
+    <td>BTRH-6-5</td>
+    <td>1-1/2" Heavy Duty Ball - 3-1/2 x 1" 10 GA. Painted Channel</td>
+    <td>5'</td>
+    <td>6"</td>
+    <td>250</td>
+    <td>25</td>
+	<td>$195.00</td>
+  </tr>
+  <tr>
+    <td>BTRH-12-5</td>
+    <td>1-1/2" Heavy Duty Ball - 3-1/2 x 1" 10 GA. Painted Channel</td>
+    <td>5'</td>
+    <td>12"</td>
+    <td>250</td>
+    <td>18</td>
+	<td>$114.00</td>
+  </tr>
+</table>
+	</div>
+    <div id="fade" class="black_overlay"></div>
+</strong></body>
+<head>
+<script type="text/javascript">
+   function updatePriceBTRL() {
+      var price = document.getElementById("productBTRL").value;
+      document.getElementById("priceBTRL").innerHTML="<p>PRICE: " + price + "</p>";
+   }
+</script>
+</head>
+<body onload="updatePriceBTRL()">
+<select id="productBTRL" onchange="updatePriceBTRL()">
+<option id="--" value="$0.00">Select Size</option>
+<option id="BTRL-3-5" value="$81.00">BTRL-3-5 ($81.00)</option>
+<option id="BTRL-4-5" value="$66.00">BTRL-4-5 ($66.00)</option>
+<option id="BTRL-6-5" value="$45.60">BTRL-6-5 ($45.60)</option>
+<option id="BTRM-3-5" value="$95.40">BTRM-3-5 ($95.40)</option>
+<option id="BTRM-4-5" value="$75.00">BTRM-4-5 ($75.00)</option>
+<option id="BTRM-6-5" value="$63.00">BTRM-6-5 ($63.00)</option>
+<option id="BTRH-6-5" value="$195.00">BTRH-6-5 ($195.00)</option>
+<option id="BTRH-12-5" value="$114.00">BTRH-12-5 ($114.00)</option>
+</select>
+<b><div id="priceBTRL"><p>Price: $XX.XX</p></div></b>
+</td>
+
+    <td><center><img src="images/RC-BTRL-3-5.jpg" border=0 align="Center" width=200 height=200 alt="" />
+        <style>
+  .black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+ }
+ .white_content {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    padding: 16px;
+    border: 16px solid #9F9F9F;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+ }
+</style>
+</head>
+<body>
+    <p><a href = "javascript:void(0)" onclick = "document.getElementById('RC-BTRM-3-10').style.display='block';document.getElementById('fade').style.display='block'"><strong>Roll-A-Way 10' Ball Transfer Rail Conveyor</strong></a></p>
+    <div id="RC-BTRM-3-10" class="white_content">
+    <img src="images/RC-BTRL-3-5.jpg" border=0 align="Left" width=350 height=300 alt="" />
+    <a href = "javascript:void(0)" onclick = "document.getElementById('RC-BTRM-3-10').style.display='none';document.getElementById('fade').style.display='none'" class="w3-closebtn w3-xlarge">&times;</a>
+	<font color="black"><strong><br>
+	You are buying one Roll-A-Way Ball Transfer Rail Conveyor. These single frame rails are custom designed for transfer systems -- allows for fast change-of-load directions. Built for rugged durable use. Contact us for a shipping quote.
+    
+	<table>
+  <tr>
+	<th>Product Number</th>
+    <th>Description</th>
+    <th>Section Length</th>
+    <th>Ball Center Spacing</th>
+    <th>Capacity Ball (lbs.)</th>
+    <th>Weight (lbs.)</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>BTRL-3-10</td>
+    <td>1" Ball with 1/4" Stem - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>10'</td>
+    <td>3"</td>
+    <td>50</td>
+    <td>31</td>
+    <td>$145.20</td>
+  </tr>
+  <tr>
+    <td>BTRL-4-10</td>
+    <td>1" Ball with 1/4" Stem - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>10'</td>
+    <td>4"</td>
+    <td>50</td>
+    <td>27</td>
+    <td>$117.00</td>
+  </tr>
+  <tr>
+    <td>BTRL-6-10</td>
+    <td>1" Ball with 1/4" Stem - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>10'</td>
+    <td>6"</td>
+    <td>50</td>
+    <td>23</td>
+    <td>$82.20</td>
+  </tr>
+  <tr>
+    <td>BTRM-3-10</td>
+    <td>1" Oval Flange - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>10'</td>
+    <td>3"</td>
+    <td>75</td>
+    <td>31</td>
+    <td>$175.20</td>
+  </tr>
+  <tr>
+    <td>BTRM-4-10</td>
+    <td>1" Oval Flange - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>10'</td>
+    <td>4"</td>
+    <td>75</td>
+    <td>27</td>
+    <td>$142.80</td>
+  </tr>
+  <tr>
+    <td>BTRM-6-10</td>
+    <td>1" Oval Flange - 2-1/2 x 1" - 12 GA. Galvanized Channel</td>
+    <td>10'</td>
+    <td>6"</td>
+    <td>75</td>
+    <td>23</td>
+    <td>$111.00</td>
+  </tr>
+  <tr>
+    <td>BTRH-6-10</td>
+    <td>1-1/2" Heavy Duty Ball - 3-1/2 x 1" 10 GA. Painted Channel</td>
+    <td>10'</td>
+    <td>6"</td>
+    <td>250</td>
+    <td>50</td>
+	<td>$384.00</td>
+  </tr>
+  <tr>
+    <td>BTRH-12-10</td>
+    <td>1-1/2" Heavy Duty Ball - 3-1/2 x 1" 10 GA. Painted Channel</td>
+    <td>10'</td>
+    <td>12"</td>
+    <td>250</td>
+    <td>36</td>
+	<td>$223.20</td>
+  </tr>
+</table>
+	</div>
+    <div id="fade" class="black_overlay"></div>
+</strong></body>
+<script type="text/javascript">
+   function updatePriceBTRM() {
+      var price = document.getElementById("productBTRM").value;
+      document.getElementById("priceBTRM").innerHTML="<p>PRICE: " + price + "</p>";
+   }
+</script>
+</head>
+<body onload="updatePriceBTRM()">
+<select id="productBTRM" onchange="updatePriceBTRM()">
+<option id="--" value="$0.00">Select Size</option>
+<option id="BTRL-3-10" value="$145.20">BTRL-3-5 ($145.20)</option>
+<option id="BTRL-4-10" value="$117.00">BTRL-4-5 ($117.00)</option>
+<option id="BTRL-6-10" value="$82.20">BTRL-6-5 ($82.20)</option>
+<option id="BTRM-3-10" value="$175.20">BTRM-3-5 ($175.20)</option>
+<option id="BTRM-4-10" value="$142.80">BTRM-4-5 ($142.80)</option>
+<option id="BTRM-6-10" value="$111.00">BTRM-6-5 ($111.00)</option>
+<option id="BTRH-6-10" value="$384.00">BTRH-6-5 ($384.00)</option>
+<option id="BTRH-12-10" value="$223.20">BTRH-12-5 ($223.20)</option>
+</select>
+<b><div id="priceBTRM"><p>Price: $XX.XX</p></div></b>
+</td>
+
+    <td><center><img src="images/BTT-2424-3.jpg" border=0 align="Center" width=200 height=200 alt="" />
+        <style>
+  .black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+ }
+ .white_content {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    padding: 16px;
+    border: 16px solid #9F9F9F;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+ }
+</style>
+</head>
+<body>
+    <p><a href = "javascript:void(0)" onclick = "document.getElementById('BTT-2424-3').style.display='block';document.getElementById('fade').style.display='block'"><strong>Roll-A-Way Ball Transfer Table Top Conveyor</strong></a></p>
+    <div id="BTT-2424-3" class="white_content">
+    <img src="images/BTT-2424-3.jpg" border=0 align="Left" width=350 height=300 alt="" />
+    <a href = "javascript:void(0)" onclick = "document.getElementById('BTT-2424-3').style.display='none';document.getElementById('fade').style.display='none'" class="w3-closebtn w3-xlarge">&times;</a>
+	<font color="black"><strong><br>
+	You are buying one Roll-A-Way Ball Transfer Table Top Conveyor. Move boxes, packages, crates, etc. any direction, effortlessly. Material glides over smooth rolling 1" steel ball transfers mounted on a formed 12 ga. reinforced steel dock. Ideal for assembly work, hand movement of cartons, etc. Each ball transfer handles 50 lbs. For use as a table, purchase Light Duty H-type supports. Contact us for a shipping quote.
+   <table>
+  <tr>
+    <th>Product Number</th>
+    <th>Spacing</th>
+    <th>Size</th>
+    <th>Weight</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>BTT-2424-3</td>
+    <td>3"</td>
+    <td>24 x 24"</td>
+    <td>47</td>
+    <td>$297.00</td>
+  </tr>
+  <tr>
+    <td>BTT-2436-3</td>
+    <td>3"</td>
+    <td>24 x 36"</td>
+    <td>72</td>
+    <td>$400.80</td>
+  </tr>
+  <tr>
+    <td>BTT-2448-3</td>
+    <td>3"</td>
+    <td>24 x 48"</td>
+    <td>92</td>
+    <td>$520.80</td>
+  </tr>
+  <tr>
+    <td>BTT-3636-3</td>
+    <td>3"</td>
+    <td>36 x 36"</td>
+    <td>98</td>
+    <td>$578.40</td>
+  </tr>
+  <tr>
+    <td>BTT-3648-3</td>
+    <td>3"</td>
+    <td>36 x 48"</td>
+    <td>128</td>
+    <td>$715.20</td>
+  </tr>
+  <tr>
+    <td>BTT-4848-3</td>
+    <td>3"</td>
+    <td>48 x 48"</td>
+    <td>190</td>
+    <td>$904.20</td>
+  </tr>
+  <tr>
+    <td>BTT-2424-4</td>
+    <td>4"</td>
+    <td>24 x 24"</td>
+    <td>37</td>
+    <td>$203.40</td>
+  </tr>
+  <tr>
+    <td>BTT-2436-4</td>
+    <td>4"</td>
+    <td>24 x 36"</td>
+    <td>55</td>
+    <td>$284.40</td>
+  </tr>
+  <tr>
+    <td>BTT-2448-4</td>
+    <td>4"</td>
+    <td>24 x 48"</td>
+    <td>73</td>
+    <td>$354.60</td>
+  </tr>
+  <tr>
+    <td>BTT-3636-4</td>
+    <td>4"</td>
+    <td>36 x 36"</td>
+    <td>77</td>
+    <td>$397.20</td>
+  </tr>
+  <tr>
+    <td>BTT-3648-4</td>
+    <td>4"</td>
+    <td>36 x 48"</td>
+    <td>100</td>
+    <td>$486.00</td>
+  </tr>
+  <tr>
+    <td>BTT-4848-4</td>
+    <td>4"</td>
+    <td>48 x 48"</td>
+    <td>133</td>
+    <td>$135.00</td>
+  </tr>
+  <tr>
+    <td>BTT-2424-6</td>
+    <td>6"</td>
+    <td>24 x 24"</td>
+    <td>30</td>
+    <td>$135.00</td>
+  </tr>
+  <tr>
+    <td>BTT-2436-6</td>
+    <td>6"</td>
+    <td>24 x 36"</td>
+    <td>45</td>
+    <td>$180.60</td>
+  </tr>
+  <tr>
+    <td>BTT-2448-6</td>
+    <td>6"</td>
+    <td>24 x 48"</td>
+    <td>60</td>
+    <td>$229.20</td>
+  </tr>
+  <tr>
+    <td>BTT-3636-6</td>
+    <td>6"</td>
+    <td>36 x 36"</td>
+    <td>62</td>
+    <td>$252.60</td>
+  </tr>
+  <tr>
+    <td>BTT-3648-6</td>
+    <td>6"</td>
+    <td>36 x 48"</td>
+    <td>80</td>
+    <td>$319.80</td>
+  </tr>
+  <tr>
+    <td>BTT-4848-6</td>
+    <td>6"</td>
+    <td>48 x 48"</td>
+    <td>107</td>
+    <td>$387.60</td>
+  </tr>
+</table>
+   </div>
+    <div id="fade" class="black_overlay"></div>
+</strong></body>
+<script type="text/javascript">
+   function updatePriceBTT() {
+      var price = document.getElementById("productBTT").value;
+      document.getElementById("priceBTT").innerHTML="<p>PRICE: " + price + "</p>";
+   }
+</script>
+</head>
+<body onload="updatePriceBTT()">
+<select id="productBTT" onchange="updatePriceBTT()">
+<option id="--" value="$0.00">Select Size</option>
+<option id="BTT-2424-3" value="$297.00">BTT-2424-3 ($297.00)</option>
+<option id="BTT-2436-3" value="$400.80">BTT-2436-3 ($400.80)</option>
+<option id="BTT-2448-3" value="$520.80">BTT-2448-3 ($520.80)</option>
+<option id="BTT-3636-3" value="$578.40">BTT-3636-3 ($578.40)</option>
+<option id="BTT-3648-3" value="$715.20">BTT-3648-3 ($715.20)</option>
+<option id="BTT-4848-3" value="$904.20">BTT-4848-3 ($904.20)</option>
+<option id="BTT-2424-4" value="$203.40">BTT-2424-4 ($203.40)</option>
+<option id="BTT-2436-4" value="$284.40">BTT-2436-4 ($284.40)</option>
+<option id="BTT-2448-4" value="$354.60">BTT-2448-4 ($354.60)</option>
+<option id="BTT-3636-4" value="$397.20">BTT-3636-4 ($397.20)</option>
+<option id="BTT-3648-4" value="$486.00">BTT-3648-4 ($486.00)</option>
+<option id="BTT-4848-4" value="$616.50">BTT-4848-4 ($616.50)</option>
+<option id="BTT-2424-6" value="$135.00">BTT-2424-6 ($135.00)</option>
+<option id="BTT-2436-6" value="$180.60">BTT-2436-6 ($180.60)</option>
+<option id="BTT-2448-6" value="$229.20">BTT-2448-6 ($229.20)</option>
+<option id="BTT-3636-6" value="$252.60">BTT-3636-6 ($252.60)</option>
+<option id="BTT-3648-6" value="$319.80">BTT-3648-6 ($319.80)</option>
+<option id="BTT-4848-6" value="$387.60">BTT-4848-6 ($387.60)</option>
+</select>
+<b><div id="priceBTT"><p>Price: $XX.XX</p></div></b>
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+    <td><center><img src="images/BT254-1.jpg" border=0 align="Center" width=200 height=200 alt="" />
+        <style>
+  .black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+ }
+ .white_content {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    padding: 16px;
+    border: 16px solid #9F9F9F;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+ }
+</style>
+</head>
+<body>
+    <p><a href = "javascript:void(0)" onclick = "document.getElementById('BT254-1').style.display='block';document.getElementById('fade').style.display='block'"><strong>1st Source Ball Transfer Unit</strong></a></p>
+    <div id="BT254-1" class="white_content">
+    <img src="images/BT254-1.jpg" border=0 align="Left" width=350 height=300 alt="" />
+    <a href = "javascript:void(0)" onclick = "document.getElementById('BT254-1').style.display='none';document.getElementById('fade').style.display='none'" class="w3-closebtn w3-xlarge">&times;</a>
+	<font color="black"><strong><br><br>
+	You are buying one 1st Source Ball Transfer Unit. Ball Transfers are use in tables, rails, and stands to move products manually in any direction. Our ball transfers are designed for a variety of mounting configurations: 
+	stud mount, flange mount, drop in, pipe mount, etc. Sizes range from 1" to 3" main balls, with capacities from 50 pounds to 650 pounds. 
+   <table>
+  <tr>
+    <th>Product Number</th>
+    <th>Ball Diameter</th>
+    <th>Threading</th>
+    <th>Ball Material</th>
+    <th>Housing Material</th>
+	<th>Capacity (lbs.)</th>
+	<th>Mounting Style</th>
+	<th>Weight (lbs.)</th>
+	<th>Price</th>
+  </tr>
+  <tr>
+    <td>BT254-1</td>
+    <td>1"</td>
+    <td>N/A</td>
+    <td>Carbon Steel</td>
+    <td>Carbon Steel</td>
+	<td>75</td>
+    <td>Flange Mount</td>
+    <td>0.34</td>
+	<td>$2.09</td>
+  </tr>  
+  <tr>
+    <td>BT254-3</td>
+    <td>1"</td>
+    <td>1/4"-20</td>
+    <td>Carbon Steel</td>
+    <td>Carbon Steel</td>
+	<td>55</td>
+    <td>Stud Mount</td>
+    <td>0.35</td>
+	<td>$2.69</td>
+  </tr> 
+  <tr>
+    <td>BT254-0420</td>
+    <td>1"</td>
+    <td>1/4"-20</td>
+    <td>Carbon Steel</td>
+    <td>Carbon Steel</td>
+	<td>55</td>
+    <td>Stud Mount</td>
+    <td>0.49</td>
+	<td>$2.41</td>
+  </tr>
+  <tr>
+    <td>BT254-1100</td>
+    <td>1"</td>
+    <td>N/A</td>
+    <td>Carbon Steel</td>
+    <td>Carbon Steel</td>
+	<td>150</td>
+    <td>Flange Mount</td>
+    <td>0.27</td>
+	<td>$3.54</td>
+  </tr> 
+  <tr>
+    <td>BT381-0210</td>
+    <td>1-1/2"</td>
+    <td>N/A</td>
+    <td>Carbon Steel</td>
+    <td>Carbon Steel</td>
+	<td>185</td>
+    <td>Flange Mount</td>
+    <td>1.25</td>
+	<td>$12.80</td>
+  </tr> 
+  </table>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+</strong></body>
+<script type="text/javascript">
+   function updatePriceBT254() {
+      var price = document.getElementById("productBT254").value;
+      document.getElementById("priceBT254").innerHTML="<p>PRICE: " + price + "</p>";
+   }
+</script>
+<body onload="updatePriceBT254()">
+<select id="productBT254" onchange="updatePriceBT254()">
+<option id="--" value="$0.00">Select Size</option>
+<option id="BT254-1" value="$2.09">BT254-1 ($2.09)</option>
+<option id="BT254-3" value="$2.69">BT254-3 ($2.69)</option>
+<option id="BT254-0420" value="$2.41">BT254-0420 ($2.41)</option>
+<option id="BT254-1100" value="$3.54">BT254-1100 ($3.54)</option>
+<option id="BT381-0210" value="$12.80">BT381-0210 ($12.80)</option>
+</select>
+<b><div id="priceBT254"><p>Price: $XX.XX</p></div></b>
+</td>
+
+    <td><center><img src="images/BT-101.jpg" border=0 align="Center" width=200 height=200 alt="" />
+        <style>
+  .black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+ }
+ .white_content {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    padding: 16px;
+    border: 16px solid #9F9F9F;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+ }
+</style>
+</head>
+<body>
+    <p><a href = "javascript:void(0)" onclick = "document.getElementById('BT-101').style.display='block';document.getElementById('fade').style.display='block'"><strong>Roll-A-Way Replacement Ball</strong></a></p>
+    <div id="BT-101" class="white_content">
+    <img src="images/BT-101.jpg" border=0 align="Left" width=350 height=300 alt="" />
+    <a href = "javascript:void(0)" onclick = "document.getElementById('BT-101').style.display='none';document.getElementById('fade').style.display='none'" class="w3-closebtn w3-xlarge">&times;</a>
+	<font color="black"><strong><br><br>
+	You are buying one Roll-A-Way Replacement Ball. Steel balls friction-free and easily glide boxes, packages, etc. in any direction. Stem mount 1/4-20 thread for BT-1001. For use with Ball Transfer Table Top. 
+    <table>
+  <tr>
+    <th>Product Number</th>
+    <th>Ball Size</th>
+    <th>Overall Height</th>
+	<th>Capacity (lbs.)</th>
+    <th>Weight (lbs.)</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>BT-101</td>
+    <td>1"</td>
+    <td>1-3/16"</td>
+	<td>75</td>
+    <td>1/2</td>
+    <td>$3.04</td>
+  </tr>
+  <tr>
+    <td>BT-201</td>
+    <td>1-1/2"</td>
+    <td>1-13/16"</td>
+	<td>250</td>
+    <td>1-1/2</td>
+    <td>$15.60</td>
+  </tr>
+  <tr>
+    <td>BT-1001</td>
+    <td>1"</td>
+    <td>1-9/16"</td>
+	<td>50</td>
+    <td>1/2</td>
+    <td>$2.64</td>
+  </tr>
+ </table>
+	</div>
+    <div id="fade" class="black_overlay"></div>
+</strong></body>
+<script type="text/javascript">
+   function updatePriceBT-101() {
+      var price = document.getElementById("productBT-101").value;
+      document.getElementById("priceBT-101").innerHTML="<p>PRICE: " + price + "</p>";
+   }
+</script>
+<body onload="updatePriceBT-101()">
+<select id="productBT-101" onchange="updatePriceBT-101()">
+<option id="--" value="$0.00">Select Size</option>
+<option id="BT-101" value="$3.04">BT-101 ($3.04)</option>
+<option id="BT-201" value="$15.60">BT-201 ($15.60)</option>
+<option id="BT-1001" value="$2.64">BT-1001 ($2.64)</option>
+</select>
+<b><div id="priceBT-101"><p>Price: $XX.XX</p></div></b>
+</td>
+
+
+</table>
+
+<br>
+
+<td bgcolor="ffffff" align="center" border="1" > 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- MMH Top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-3390012110274891"
+     data-ad-slot="8593797488"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+
+<!---Bottom Table--->
+<center><table class='four' bgcolor=#E5E5E5 >
+<tr>
+<td  bgcolor="white" class='three' align="center" height="25" width="300">
+<h5>
+<ul style="list-style-type:none"><center>
+<li><a href="contact.html" class='links2'>Contact Us</a></font></li>
+<li><a href="privacy_policy.html" class='links2'>Privacy Policy</font></a></li>
+<li><a href="terms_and_conditions_of_service.html" class='links2'>Terms and Conditions</font></a></li>
+<li><a href="http://search.freefind.com/siteindex.html?si=46490915" class='links2'>Index</a></li>
+<li><a href="http://search.freefind.com/find.html?si=46490915&amp;m=0&amp;p=0" class='links2'>Sitemap</a></li>
+</center>
+</h5>
+</ul>
+</td>
+
+<td colspan="2" bgcolor="white" class='two' colspan="2">
+<center>
+<!-- Begin Official PayPal Seal --><center><a href="https://www.paypal.com/us/verified/pal=mansfield3233%40aol%2ecom" target="_blank"><img src="https://www.paypal.com/en_US/i/icon/verification_seal.gif" border="0" alt="Official PayPal Seal"></center></A><!-- End Official PayPal Seal -->
+</center>
+<td colspan="2" bgcolor="white" class='two' colspan="2">
+<center>
+<!-- PayPal Logo --><table border="0" cellpadding="0" cellspacing="0" align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark"></a></td></tr></table><!-- PayPal Logo -->
+</center>
+
+</td>
+
+<td bgcolor="white" class='three' align="center"  width="150">
+<font size="1" color="black">2015 Copyright © Mansfield Material Handling<br>All rights reserved. <br><br><!--<a href="http://seotools.scrubtheweb.com/" title="The Best SEO Tools"><font size="1" color="white">The
+Best SEO Tools</a></p>-->
+</td></center>
+<!---End Bottom Table--->	
+	
+</body>
+</html>
