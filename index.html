@@ -14,6 +14,17 @@
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
 </style>
+
+  
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+		
+
+	
+	
 </head>
 
 <body>
@@ -26,6 +37,33 @@
   <li><a href="https://www.pinterest.com/mansfieldfw/" target="blank">Pinterest</a></li>
   <li><a href="https://twitter.com/MansfieldFW" target="blank">Twitter</a></li>
   <li><a href="javascript:void(0)" onclick="w3_open()">Products <i class="fa fa-caret-down"></i></a></li>
+  	
+	
+		<!-- JAVASCRIPT to clear search text when the field is clicked -->
+<script type="text/javascript">
+window.onload = function(){ 
+	//Get submit button
+	var submitbutton = document.getElementById("tfq");
+	//Add listener to submit button
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search'){//Customize this text string to whatever you want
+				submitbutton.value = '';
+			}
+		});
+	}
+}
+</script>
+	<!-- HTML for SEARCH BAR -->
+	<div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.mansfieldrack.com">
+			<input type="hidden" name="as_dt" value="i"/>
+			<input type="hidden" name="as_sitesearch" value="http://www.mansfieldrack.com"/>
+		        <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
+		</form>
+		<div class="tfclear"></div>
+	</div>
+  
 </ul>
 
 <nav class="w3-dropnav w3-card-2" style="display:none" id="myDropnav">
@@ -127,12 +165,20 @@ function w3_close() {
 </div>
 <!--- End Scroll --->
 
+
 <center>
 <table style="text-align: left; width: 984px; height: 80px;" border="0" cellpadding="0" cellspacing="0" bordercolor="#635a5a" bgcolor="white">
 
 <tr><td>
 
-   <div class="w3-content w3-display-container" style="max-width:500px">
+<center>
+<p>Mansfield is a family owned and operated Material Handling Company located in Fort Wayne, Indiana. We buy and sell both new and used material handling products. 
+Our website is still under construction so if you cannot find what you are looking for please feel free to contact us.</p>
+
+<h2>Featured Products</h2>
+</center>
+
+  <div class="w3-content w3-display-container" style="max-width:500px">
   <img class="mySlides" src="images/featuredproduct.jpg" style="width:400px">
   <img class="mySlides" src="images/PB30210-17.jpeg" style="width:400px">
   <img class="mySlides" src="images/waterhogecograndpremier.jpeg" style="width:400px">
@@ -160,6 +206,49 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
+
+
+
+<center><div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Approximate Shipping Cost:</h3>
+          <form id="new-package">
+            <div class="form-group">
+              <label for="new-package-length">Length:</label>
+              <input type="number" class="form-control" placeholder="Length in inches" id="new-package-length" autofocus min=1 max=1000 required>
+            </div>
+            <div class="form-group">
+              <label for="new-package-width">Width:</label>
+              <input type="number" class="form-control" placeholder="Width in inches" id="new-package-width" min=1 max=1000 required>
+            </div>
+            <div class="form-group">
+              <label for="new-package-height">Height:</label>
+              <input type="number" class="form-control" placeholder="Height in inches" id="new-package-height" min=1 max=1000 required>
+            </div>
+            <div class="form-group">
+              <label for="new-package-weight">Weight:</label>
+              <input type="number" class="form-control" placeholder="Weight in pounds" id="new-package-weight" min=1 max=800 required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Find Price</button>
+          </form>
+        </div>
+          <div class="col-md-8">
+            <div id="show-price">
+              <h2>Price: $<span class="price"></span></h2>
+              <p>Length: <span class="length"></span></p>
+              <p>Width: <span class="width"></span></p>
+              <p>Height: <span class="height"></span></p>
+              <p>Weight: <span class="weight"></span></p>
+
+              <span class="draw"></span>
+
+            </div>
+          </div>
+      </div>
+    </div>
 
 
 <div class="w3-row-padding w3-margin-top">

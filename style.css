@@ -392,3 +392,94 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+
+
+
+#checkoutsteps {list-style: none; margin: 0; padding: 0;}
+#checkoutsteps li {font-size: small; display: inline; color: #aaa; padding: 0 10px; border-right: 1px solid #999;}
+#checkoutsteps li.currentstep {color: #000;}
+#checkoutsteps li.last {border-right: none;}
+table.form-tbl {width: 100%;}
+table.form-tbl td, table.form-tbl th {padding: 4px 2px;}
+table.form-tbl th {width: 160px;}
+table.form-tbl input[type="text"], table.form-tbl textarea {width: 75%;}
+
+
+#checkoutsteps {list-style: none; margin: 0; padding: 0;}
+#checkoutsteps li {font-size: small; display: inline; color: #aaa; padding: 0 10px; border-right: 1px solid #999;}
+#checkoutsteps li.currentstep {color: #000;}
+#checkoutsteps li.last {border-right: none;}
+.shopping-cart {width: 100%; border-top: 1px solid #C3C3C3; border-right: 1px solid #C3C3C3; clear: both;}
+.shopping-cart th {background: #F0F0F0;}
+.shopping-cart th, .shopping-cart td {border-bottom: 1px solid #C3C3C3; border-left: 1px solid #C3C3C3; padding: 3px;}
+.shopping-cart .link {font-size: 90%; white-space: nowrap;}
+.shopping-cart .product {width: 55%}
+.shopping-cart .price {width: 5%;}
+.shopping-cart .quantity {width: 15%;}
+.shopping-cart .quantity input {width: 30px;}
+.shopping-cart .price {width: 20%;}
+.shopping-cart .product-img {border: 1px solid #ccc; background-color: #e9e9e9; padding: 3px; width: 80px; height: 80px; float: left;}
+.shopping-cart .product-img img {max-width:80px;max-height:80px;width:auto;height:auto;}
+.shopping-cart .product-name {margin-left: 100px;}
+.shopping-cart tr.totals {font-weight: bold;}
+.shopping-cart tr.totals a {font-weight: normal;}
+.shopping-cart .quantity-span {text-align: right;}
+
+
+
+
+#show-price {
+  display: none;
+}
+
+
+
+	#tfheader{
+		background-color:#000000;
+	}
+	#tfnewsearch{
+		float:right;
+		padding:0px;
+	}
+	.tftextinput2{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#666;
+		border:1px solid #666; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton2 {
+		margin: 0;
+		padding: 5px 7px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		font-weight:bold;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #666; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFF));
+		background: -moz-linear-gradient(top,  #001ae2,  #001ae2);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton2:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#CCC));
+		background: -moz-linear-gradient(top,  #CCC,  #CCC);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton2::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
