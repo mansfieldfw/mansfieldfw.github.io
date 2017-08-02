@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<title>Mansfield Material Handling</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b><img src="images/MMHsquareLarge.png" alt="mansfield logo" width="120" height="120" align="left"/></b></h3>
+  </div>
+  
+  <div class="links">
+	<a href="tel:2604323013"><img src="images/phone.jpg" width="50" height="50"></a>
+	<a href="https://www.facebook.com/MansfieldMaterialHandling" target="blank" alt="Facebook"><img src="images/facebook.jpg" width="50" height="50"></a>
+	<a href="https://www.pinterest.com/mansfieldfw/" target="blank" alt="Pinterest"><img src="images/pinterest2.png" width="50" height="50"></a>
+	<a href="https://twitter.com/MansfieldFW" target="blank" alt="Twitter"><img src="images/twitter2.png" width="50" height="50"></a>
+</div>
+  
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button">About Us</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Products <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+	<a href="bins.html" class="w3-bar-item w3-button">Bins & Totes</a>
+    <a href="cabinets.html" class="w3-bar-item w3-button">Cabinets</a>
+    <a href="baskets.html" class="w3-bar-item w3-button">Canvas & Wire Baskets</a>
+	<a href="carts.html" class="w3-bar-item w3-button">Carts & Hand Trucks</a>
+    <a href="casters.html" class="w3-bar-item w3-button">Casters</a>
+    <a href="chairs.html" class="w3-bar-item w3-button">Chairs & Stools</a>
+	<a href="containers.html" class="w3-bar-item w3-button">Containers</a>
+    <a href="conveyors.html" class="w3-bar-item w3-button">Conveyors</a>
+	<a href="cranes.html" class="w3-bar-item w3-button">Cranes</a>
+	<a href="crowd.html" class="w3-bar-item w3-button">Crowd Control</a>
+    <a href="desk.html" class="w3-bar-item w3-button">Desks, Tables, & Workbenches</a>
+	<a href="dock.html" class="w3-bar-item w3-button">Dock Equipment</a>
+	<a href="dollies.html" class="w3-bar-item w3-button">Dollies</a>
+    <a href="drum.html" class="w3-bar-item w3-button">Drum Equipment</a>
+	<a href="dump.html" class="w3-bar-item w3-button">Dump Hoppers</a>
+	<a href="electrical.html" class="w3-bar-item w3-button">Electrical</a>
+    <a href="mats.html" class="w3-bar-item w3-button">Floor Mats</a>
+	<a href="forklift.html" class="w3-bar-item w3-button">Forklift Equipment</a>
+	<a href="gloves.html" class="w3-bar-item w3-button">Gloves</a>
+	<a href="guards.html" class="w3-bar-item w3-button">Guards</a>
+    <a href="hoists.html" class="w3-bar-item w3-button">Hoists & Equipment</a>
+	<a href="hose.html" class="w3-bar-item w3-button">Hose & Cord Reels</a>
+	<a href="ladders.html" class="w3-bar-item w3-button">Ladders</a>
+    <a href="lift.html" class="w3-bar-item w3-button">Lift Tables & Accessories</a>
+	<a href="lockers.html" class="w3-bar-item w3-button">Lockers</a>
+	<a href="office.html" class="w3-bar-item w3-button">Office Furniture</a>
+    <a href="pallets.html" class="w3-bar-item w3-button">Pallets & Equipment</a>
+	<a href="partitions.html" class="w3-bar-item w3-button">Partitions</a>
+	<a href="platforms.html" class="w3-bar-item w3-button">Platforms</a>
+    <a href="racking.html" class="w3-bar-item w3-button">Racking</a>
+	<a href="safety.html" class="w3-bar-item w3-button">Safety & Security Equipment</a>
+	<a href="scales.html" class="w3-bar-item w3-button">Scales</a>
+    <a href="shelving.html" class="w3-bar-item w3-button">Shelving</a>
+	<a href="shipping.html" class="w3-bar-item w3-button">Shipping & Strapping Supplies</a>
+	<a href="tools.html" class="w3-bar-item w3-button">Tools & Accessories</a>
+    <a href="warehouse.html" class="w3-bar-item w3-button">Warehouse Equipment</a>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide"><img src="images/MMHsquareLarge.png" alt="mansfield logo" width="120" height="120" align="left"/></div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Home</p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="images/bins.jpeg" alt="Bins" style="width:100%">
+    <div class="w3-display-topleft w3-text-black" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
+      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+      <!--<h1 class="w3-hide-small">COLLECTION 2016</h1>--->
+      <p><a href="#bins" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p></p>
+  </div>
+  
+  
+<!-- Product grid -->	
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="bins.html"><img src="images/bins.jpeg" alt="" style="width:100%"></a>
+			<h5>Bins & Totes</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="cabinets.html"><img src="images/cabinet.jpg" style="width:100%"></a>
+			<h5>Cabinets</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="baskets.html"><img src="images/wire.jpg" style="width:100%"></a>
+			<h5>Canvas & Wire Baskets</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="carts.html"><img src="images/cart.jpg" style="width:100%"></a>
+			<h5>Carts & Hand Trucks</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="casters.html"><img src="images/casters.jpg" style="width:100%"></a>
+			<h5>Casters</h5>
+		</div>
+	</div>
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="chairs.html"><img src="images/chairs.jpg" style="width:100%"></a>
+			<h5>Chairs & Stools</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="containers.html"><img src="images/containers.jpg" style="width:100%"></a>
+			<h5>Containers</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="conveyors.html"><img src="images/conveyor.jpg" style="width:100%"></a>
+			<h5>Conveyors</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="cranes.html"><img src="images/cranes.jpg" style="width:100%"></a>
+			<h5>Cranes</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="desk.html"><img src="images/tables.jpg" style="width:100%"></a>
+			<h5>Desks, Tables, & Workbenches</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="dock.html"><img src="images/dock.jpg" style="width:100%"></a>
+			<h5>Dock Equipment</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="dollies.html"><img src="images/dollies.jpg" style="width:100%"></a>
+			<h5>Dollies</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="drum.html"><img src="images/drum.jpg" style="width:100%"></a>
+			<h5>Drum Equipment</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="dump.html"><img src="images/dump.jpg" style="width:100%"></a>
+			<h5>Dump Hoppers</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="mats.html"><img src="images/mats.jpg" style="width:100%"></a>
+			<h5>Floor Mats</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="forklift.html"><img src="images/forklift.jpg" style="width:100%"></a>
+			<h5>Forklift Equipment</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="gloves.html"><img src="images/GWON.jpg" style="width:100%"></a>
+			<h5>Gloves</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="guards.html"><img src="images/crowd.jpg" style="width:100%"></a>
+			<h5>Guards</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="hoists.html"><img src="images/hoists.jpg" style="width:100%"></a>
+			<h5>Hoists & Equipment</h5>
+		</div>
+	</div>
+
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="hose.html"><img src="images/hose.jpg" style="width:100%"></a>
+			<h5>Hose & Cord Reels</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="ladders.html"><img src="images/ladders.jpg" style="width:100%"></a>
+			<h5>Ladders</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="lift.html"><img src="images/lift.jpg" style="width:100%"></a>
+			<h5>Lift Tables & Accessories</h5>
+		</div>
+	</div>
+
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="lockers.html"><img src="images/lockers.jpg" style="width:100%"></a>
+			<h5>Lockers</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="office.html"><img src="images/office.jpg" style="width:100%"></a>
+			<h5>Office Furniture</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="pallets.html"><img src="images/pallets.jpg" style="width:100%"></a>
+			<h5>Pallets & Equipment</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="partitions.html"><img src="images/partitions.jpg" style="width:100%"></a>
+			<h5>Partitions</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="platforms.html"><img src="images/platform.jpg" style="width:100%"></a>
+			<h5>Platforms</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="racking.html"><img src="images/rack.jpg" style="width:100%"></a>
+			<h5>Racking</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="safety.html"><img src="images/safety.jpg" style="width:100%"></a>
+			<h5>Safety & Security Equipment</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="scales.html"><img src="images/scale.jpg" style="width:100%"></a>
+			<h5>Scales</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="shelving.html"><img src="images/shelving.jpg" style="width:100%"></a>
+			<h5>Shelving</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="shipping.html"><img src="images/shipping.jpg" style="width:100%"></a>
+			<h5>Shipping & Strapping Supplies</h5>
+		</div>
+	</div>
+
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="tools.html"><img src="images/tools.jpg" style="width:100%"></a>
+			<h5>Tools & Accessories</h5>
+		</div>
+	</div>
+
+
+</div>
+<div class="w3-row-padding w3-margin-top">
+
+	<div class="w3-third">
+		<div class="w3-container">
+			<a href="warehouse.html"><img src="images/warehouse.jpg" style="width:100%"></a>
+			<h5>Warehouse Equipment</h5>
+		</div>
+	</div>
+
+
+</div>
+
+<!-- End Product grid -->  
+   
+ <!-- Extras Below Pictures
+ <span class="w3-tag w3-display-topleft">New</span>
+
+ <span class="w3-tag w3-display-topleft">Sale</span>
+ -->
+  
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i>Mansfield Material Handling</p>
+        <p><i class="fa fa-fw fa-phone"></i>260-432-3013</p>
+        <p><i class="fa fa-fw fa-envelope"></i>mansfieldfw@comcast.net</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-paypal"></i>Paypal</p>
+        <p><i class="fa fa-fw fa-credit-card"></i>Credit Cards</p>
+        <br>
+        <a href="https://www.facebook.com/MansfieldMaterialHandling" target="blank" alt="Facebook"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></i></a>
+        <a href="https://www.pinterest.com/mansfieldfw/" target="blank" alt="Pinterest"><i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i></a>
+        <a href="https://twitter.com/MansfieldFW" target="blank" alt="Twitter"><i class="fa fa-twitter w3-hover-opacity w3-large"></i></a>
+        <!--<i class="fa fa-linkedin w3-hover-opacity w3-large"></i>-->
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24"></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Bins" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
