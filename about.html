@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<title>Mansfield Material Handling</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b><img src="images/MMHsquareLarge.png" alt="mansfield logo" width="120" height="120" align="left"/></b></h3>
+  </div>
+  
+  <div class="links">
+	<a href="tel:2604323013"><img src="images/phone.jpg" width="50" height="50"></a>
+	<a href="https://www.facebook.com/MansfieldMaterialHandling" target="blank" alt="Facebook"><img src="images/facebook.jpg" width="50" height="50"></a>
+	<a href="https://www.pinterest.com/mansfieldfw/" target="blank" alt="Pinterest"><img src="images/pinterest2.png" width="50" height="50"></a>
+	<a href="https://twitter.com/MansfieldFW" target="blank" alt="Twitter"><img src="images/twitter2.png" width="50" height="50"></a>
+</div>
+  
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button">About Us</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Products <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+	<a href="" class="w3-bar-item w3-button">Bins & Totes</a>
+    <a href="" class="w3-bar-item w3-button">Cabinets</a>
+    <a href="" class="w3-bar-item w3-button">Canvas & Wire Baskets</a>
+	<a href="" class="w3-bar-item w3-button">Carts & Hand Trucks</a>
+    <a href="" class="w3-bar-item w3-button">Casters</a>
+    <a href="" class="w3-bar-item w3-button">Chairs & Stools</a>
+	<a href="" class="w3-bar-item w3-button">Containers</a>
+    <a href="" class="w3-bar-item w3-button">Conveyors</a>
+	<a href="" class="w3-bar-item w3-button">Cranes</a>
+	<a href="" class="w3-bar-item w3-button">Crowd Control</a>
+    <a href="" class="w3-bar-item w3-button">Desks, Tables, & Workbenches</a>
+	<a href="" class="w3-bar-item w3-button">Dock Equipment</a>
+	<a href="" class="w3-bar-item w3-button">Dollies</a>
+    <a href="" class="w3-bar-item w3-button">Drum Equipment</a>
+	<a href="" class="w3-bar-item w3-button">Dump Hoppers</a>
+	<a href="" class="w3-bar-item w3-button">Electrical</a>
+    <a href="" class="w3-bar-item w3-button">Floor Mats</a>
+	<a href="" class="w3-bar-item w3-button">Forklift Equipment</a>
+	<a href="" class="w3-bar-item w3-button">Gloves</a>
+	<a href="" class="w3-bar-item w3-button">Guards</a>
+    <a href="" class="w3-bar-item w3-button">Hoists & Equipment</a>
+	<a href="" class="w3-bar-item w3-button">Hose & Cord Reels</a>
+	<a href="" class="w3-bar-item w3-button">Ladders</a>
+    <a href="" class="w3-bar-item w3-button">Lift Tables & Accessories</a>
+	<a href="" class="w3-bar-item w3-button">Lockers</a>
+	<a href="" class="w3-bar-item w3-button">Office Furniture</a>
+    <a href="" class="w3-bar-item w3-button">Pallets & Equipment</a>
+	<a href="" class="w3-bar-item w3-button">Partitions</a>
+	<a href="" class="w3-bar-item w3-button">Platforms</a>
+    <a href="" class="w3-bar-item w3-button">Racking</a>
+	<a href="" class="w3-bar-item w3-button">Safety & Security Equipment</a>
+	<a href="" class="w3-bar-item w3-button">Scales</a>
+    <a href="" class="w3-bar-item w3-button">Shelving</a>
+	<a href="" class="w3-bar-item w3-button">Shipping & Strapping Supplies</a>
+	<a href="" class="w3-bar-item w3-button">Tools & Accessories</a>
+    <a href="" class="w3-bar-item w3-button">Warehouse Equipment</a>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide"><img src="images/MMHsquareLarge.png" alt="mansfield logo" width="120" height="120" align="left"/></div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">About Us</p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="images/about2.png" alt="About" style="width:75%">
+    <div class="w3-display-topleft w3-text-black" style="padding:24px 48px">
+      <!--<h1 class="w3-jumbo w3-hide-small">About Us</h1>
+      <h1 class="w3-hide-large w3-hide-medium">About Us</h1>
+      <h1 class="w3-hide-small">COLLECTION 2016</h1>
+      <p><a href="#bins" class="w3-button w3-black w3-padding w3-large">SHOP NOW</a></p>-->
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p></p>
+  </div>
+
+  <!---Body--->
+	<div class="row">
+		<div class="twelve columns">
+			<div class="row">
+				<div class="eight columns">
+					
+					<p>
+					Mansfield Material Handling is a family owned and operated business out of Fort Wayne, Indiana. Created in 1958 by Don Mansfield, Mansfield Material Handling has been and will continue to provide an extensive variety of products for your industrial needs. The company has expanded over the years and now sells items from just about every product category imaginable. Mansfield Material Handling strives to provide the best products and best customer service to you!
+
+					<h4>Our contact information:</h4>
+
+					By email:
+					mansfieldfw@comcast.net
+					<br>
+					By standard mail:
+					Mansfield Material Handling
+					3233 Covington Rd.
+					Fort Wayne, IN 46802
+					<br>
+					By phone:
+					260 432-3013 (between 10 a.m. and 5 p.m. EST)
+
+					<br>
+					<h3>Shipping Information:</h3>
+					<h4>General Information -</h4>
+					We ship to the 48 contiguous states, but can ship to other locations as well. If you are not located in these 48 states, please contact us and we will try to work something out. If you are in another country, always contact us before you purchase an item so we can look into shipping for you.
+
+					<h4>Shipment Type -</h4>
+					Many items are shipped Ground Service via FedEx or UPS. If you need the item more quickly, we can work out a deal for another shipping method. A variety of products are sent freight so please contact us for a shipping quote and lead time. Local pick-up is an option.
+
+					<h4>Shipping Time -</h4>
+					We prepare and ship our products as quickly as possible, usually within three days of payment. The shipping time is generally 7-10 days. When shipping time is different, we will try to provide a lead time on the item description. We will send a tracking number to update you on the status of your item.
+
+					<br>
+					<h3>Refund, Returns and Cancellation Policies:</h3>
+					<h4>Return Policy -</h4>
+					The return policy differs for items throughout our store so please read and understand the policy on the particular item that you intend to buy before you purchase it. For items in which returns are accepted, we require you to contact us within 7 days of receiving the item to notify us that you intend to return it. If you do not, then we assume all is well. Some exceptions may occur.
+
+					<h4>Damages From Shipping -</h4>
+					If an item is damaged from shipping, it must be claimed with the carrier. We are not responsible for items damaged by the carrier. Please be sure that you inspect the package upon arrival so that you don't get stuck with a broken or damaged product.
+
+					<h4>Manufacturer Flaws -</h4>
+					If you receive a product which has no packaging problems yet is damaged or flawed, please contact us and we will give you instructions on how to proceed. Please do not send the item back immediately. We need to work out the details first. In most cases, we require photos of the flawed product.
+
+					<h4>Cancellations -</h4>
+					If you would like to cancel a purchase, please contact us promptly and notify us of your intent. We know that sometimes a buyer will bid on multiple items in hopes of winning just one and then they get stuck with two. At times people will also change their minds about their purchase and we do not want to discourage you from shopping at our store. Cancellations are accepted, but only before the item has been shipped. Once it is out of our hands, then we will not accept cancellations. Contact us for discrepancies.
+
+					<h4>Return Costs -</h4>
+					We can refund shipping costs only if the return is a result of our error.We will pay for return shipping only in particular instances. We will Not pay for return shipping if the item is damaged due to the carrier, if you decide you don't want the item, if you neglected to understand the listing (always contact us if you have questions), or if the item is damaged by you. We Will pay if we ship you the wrong item and in other particular cases.
+
+					</p>
+										
+</div>
+
+	<!-- don't mind this script, I just added them for fun! -->
+	<script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script>
+	
+
+<div class="four columns">
+					<h4>Mansfield</h4>
+					
+					<p>
+					We offer many new and used material handling solutions. We specialize in pallet rack, shelving, conveyor systems, storage solutions, bins, totes, drum handling equipment, 
+					and much more. Feel free to contact us for information on the many products we offer.
+
+					<br /><br />
+					
+					</p>
+					<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="300" height="300" 
+					Src="https://maps.google.com/maps?hl=en&q=Mansfield Material Handling 3233 Covington Road, Fort Wayne, IN 46802&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<br>
+
+<td bgcolor="ffffff" align="center" border="1" width="728" height="90"> 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- MMH Top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-3390012110274891"
+     data-ad-slot="8593797488"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+
+<!---End of Body--->
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <!--<div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>-->
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i>Mansfield Material Handling</p>
+        <p><i class="fa fa-fw fa-phone"></i>260-432-3013</p>
+        <p><i class="fa fa-fw fa-envelope"></i>mansfieldfw@comcast.net</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-paypal"></i>Paypal</p>
+        <p><i class="fa fa-fw fa-credit-card"></i>Credit Cards</p>
+        <br>
+        <a href="https://www.facebook.com/MansfieldMaterialHandling" target="blank" alt="Facebook"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></i></a>
+        <a href="https://www.pinterest.com/mansfieldfw/" target="blank" alt="Pinterest"><i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i></a>
+        <a href="https://twitter.com/MansfieldFW" target="blank" alt="Twitter"><i class="fa fa-twitter w3-hover-opacity w3-large"></i></a>
+        <!--<i class="fa fa-linkedin w3-hover-opacity w3-large"></i>-->
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24"></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Bins" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
